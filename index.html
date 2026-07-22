@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('site-theme');
+    if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  } catch(e){}
+})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Haris Fasha Portfolio — Beranda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=JetBrains+Mono:wght@500&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "background": "rgb(var(--c-background) / <alpha-value>)", "on-background": "rgb(var(--c-on-background) / <alpha-value>)", "surface": "rgb(var(--c-surface) / <alpha-value>)",
+                    "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)", "on-surface-variant": "rgb(var(--c-on-surface-variant) / <alpha-value>)", "surface-variant": "rgb(var(--c-surface-variant) / <alpha-value>)",
+                    "surface-container-lowest": "rgb(var(--c-surface-container-lowest) / <alpha-value>)", "surface-container-low": "rgb(var(--c-surface-container-low) / <alpha-value>)", "surface-container": "rgb(var(--c-surface-container) / <alpha-value>)",
+                    "surface-container-high": "rgb(var(--c-surface-container-high) / <alpha-value>)", "surface-container-highest": "rgb(var(--c-surface-container-highest) / <alpha-value>)", "surface-bright": "rgb(var(--c-surface-bright) / <alpha-value>)",
+                    "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)", "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)", "outline": "rgb(var(--c-outline) / <alpha-value>)",
+                    "outline-variant": "rgb(var(--c-outline-variant) / <alpha-value>)", "primary": "rgb(var(--c-primary) / <alpha-value>)", "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)",
+                    "primary-container": "rgb(var(--c-primary-container) / <alpha-value>)", "on-primary-container": "rgb(var(--c-on-primary-container) / <alpha-value>)", "primary-fixed": "rgb(var(--c-primary-fixed) / <alpha-value>)",
+                    "on-primary-fixed": "rgb(var(--c-on-primary-fixed) / <alpha-value>)", "primary-fixed-dim": "rgb(var(--c-primary-fixed-dim) / <alpha-value>)", "on-primary-fixed-variant": "rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)",
+                    "secondary": "rgb(var(--c-secondary) / <alpha-value>)", "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)", "secondary-container": "rgb(var(--c-secondary-container) / <alpha-value>)",
+                    "on-secondary-container": "rgb(var(--c-on-secondary-container) / <alpha-value>)", "secondary-fixed": "rgb(var(--c-secondary-fixed) / <alpha-value>)", "on-secondary-fixed": "rgb(var(--c-on-secondary-fixed) / <alpha-value>)",
+                    "secondary-fixed-dim": "rgb(var(--c-secondary-fixed-dim) / <alpha-value>)", "on-secondary-fixed-variant": "rgb(var(--c-on-secondary-fixed-variant) / <alpha-value>)", "tertiary": "rgb(var(--c-tertiary) / <alpha-value>)",
+                    "on-tertiary": "rgb(var(--c-on-tertiary) / <alpha-value>)", "tertiary-container": "rgb(var(--c-tertiary-container) / <alpha-value>)", "on-tertiary-container": "rgb(var(--c-on-tertiary-container) / <alpha-value>)",
+                    "tertiary-fixed": "rgb(var(--c-tertiary-fixed) / <alpha-value>)", "on-tertiary-fixed": "rgb(var(--c-on-tertiary-fixed) / <alpha-value>)", "tertiary-fixed-dim": "rgb(var(--c-tertiary-fixed-dim) / <alpha-value>)",
+                    "on-tertiary-fixed-variant": "rgb(var(--c-on-tertiary-fixed-variant) / <alpha-value>)", "error": "rgb(var(--c-error) / <alpha-value>)", "on-error": "rgb(var(--c-on-error) / <alpha-value>)",
+                    "error-container": "rgb(var(--c-error-container) / <alpha-value>)", "on-error-container": "rgb(var(--c-on-error-container) / <alpha-value>)", "inverse-surface": "rgb(var(--c-inverse-surface) / <alpha-value>)",
+                    "inverse-on-surface": "rgb(var(--c-inverse-on-surface) / <alpha-value>)", "inverse-primary": "rgb(var(--c-inverse-primary) / <alpha-value>)"
+                },
+                "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                "spacing": { "section-gap": "120px", "margin-desktop": "64px", "container-max": "1280px", "margin-mobile": "16px", "base": "8px", "gutter": "24px" },
+                "fontFamily": {
+                    "display-lg": ["Montserrat"], "headline-md": ["Montserrat"], "label-md": ["JetBrains Mono"],
+                    "display-lg-mobile": ["Montserrat"], "body-lg": ["\"Source Sans 3\""], "headline-lg": ["Montserrat"], "body-md": ["\"Source Sans 3\""]
+                },
+                "fontSize": {
+                    "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                    "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                    "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "900" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                },
+                "boxShadow": {
+                    'hard-primary': '4px 4px 0px 0px rgba(0,66,117,1)',
+                    'hard-secondary': '4px 4px 0px 0px rgba(187,0,19,1)',
+                    'hard-sm': '2px 2px 0px 0px rgba(0,66,117,0.2)'
+                }
+            }
+        }
+    }
+</script>
+<style>
+:root {
+    --c-background: 248 249 250;
+    --c-on-background: 25 28 29;
+    --c-surface: 248 249 250;
+    --c-on-surface: 25 28 29;
+    --c-on-surface-variant: 65 71 80;
+    --c-surface-variant: 225 227 228;
+    --c-surface-container-lowest: 255 255 255;
+    --c-surface-container-low: 243 244 245;
+    --c-surface-container: 237 238 239;
+    --c-surface-container-high: 231 232 233;
+    --c-surface-container-highest: 225 227 228;
+    --c-surface-bright: 248 249 250;
+    --c-surface-dim: 217 218 219;
+    --c-surface-tint: 0 66 117;
+    --c-outline: 114 119 129;
+    --c-outline-variant: 193 199 210;
+    --c-primary: 0 66 117;
+    --c-on-primary: 255 255 255;
+    --c-primary-container: 0 90 156;
+    --c-on-primary-container: 175 209 255;
+    --c-primary-fixed: 210 228 255;
+    --c-on-primary-fixed: 0 28 55;
+    --c-primary-fixed-dim: 161 201 255;
+    --c-on-primary-fixed-variant: 0 72 127;
+    --c-secondary: 187 0 19;
+    --c-on-secondary: 255 255 255;
+    --c-secondary-container: 231 21 32;
+    --c-on-secondary-container: 255 251 255;
+    --c-secondary-fixed: 255 218 214;
+    --c-on-secondary-fixed: 65 0 2;
+    --c-secondary-fixed-dim: 255 180 171;
+    --c-on-secondary-fixed-variant: 147 0 13;
+    --c-tertiary: 112 93 0;
+    --c-on-tertiary: 255 255 255;
+    --c-tertiary-container: 200 169 0;
+    --c-on-tertiary-container: 75 62 0;
+    --c-tertiary-fixed: 255 225 109;
+    --c-on-tertiary-fixed: 34 27 0;
+    --c-tertiary-fixed-dim: 233 196 0;
+    --c-on-tertiary-fixed-variant: 84 70 0;
+    --c-error: 186 26 26;
+    --c-on-error: 255 255 255;
+    --c-error-container: 255 218 214;
+    --c-on-error-container: 147 0 10;
+    --c-inverse-surface: 46 49 50;
+    --c-inverse-on-surface: 240 241 242;
+    --c-inverse-primary: 161 201 255;
+}
+.dark {
+    --c-background: 17 20 21;
+    --c-on-background: 225 227 228;
+    --c-surface: 17 20 21;
+    --c-on-surface: 225 227 228;
+    --c-on-surface-variant: 193 199 210;
+    --c-surface-variant: 65 71 80;
+    --c-surface-container-lowest: 12 14 15;
+    --c-surface-container-low: 25 28 29;
+    --c-surface-container: 29 32 33;
+    --c-surface-container-high: 40 43 44;
+    --c-surface-container-highest: 51 54 55;
+    --c-surface-bright: 55 58 60;
+    --c-surface-dim: 17 20 21;
+    --c-surface-tint: 161 201 255;
+    --c-outline: 139 145 155;
+    --c-outline-variant: 65 71 80;
+    --c-primary: 161 201 255;
+    --c-on-primary: 0 45 84;
+    --c-primary-container: 0 72 127;
+    --c-on-primary-container: 210 228 255;
+    --c-primary-fixed: 210 228 255;
+    --c-on-primary-fixed: 0 28 55;
+    --c-primary-fixed-dim: 161 201 255;
+    --c-on-primary-fixed-variant: 0 72 127;
+    --c-secondary: 255 180 171;
+    --c-on-secondary: 105 0 5;
+    --c-secondary-container: 147 0 13;
+    --c-on-secondary-container: 255 218 214;
+    --c-secondary-fixed: 255 218 214;
+    --c-on-secondary-fixed: 65 0 2;
+    --c-secondary-fixed-dim: 255 180 171;
+    --c-on-secondary-fixed-variant: 147 0 13;
+    --c-tertiary: 233 196 0;
+    --c-on-tertiary: 58 47 0;
+    --c-tertiary-container: 84 70 0;
+    --c-on-tertiary-container: 255 225 109;
+    --c-tertiary-fixed: 255 225 109;
+    --c-on-tertiary-fixed: 34 27 0;
+    --c-tertiary-fixed-dim: 233 196 0;
+    --c-on-tertiary-fixed-variant: 84 70 0;
+    --c-error: 255 180 171;
+    --c-on-error: 105 0 5;
+    --c-error-container: 147 0 10;
+    --c-on-error-container: 255 218 214;
+    --c-inverse-surface: 225 227 228;
+    --c-inverse-on-surface: 46 49 50;
+    --c-inverse-primary: 0 66 117;
+}
+
+    .hero-bg { background: linear-gradient(135deg, theme('colors.background') 0%, theme('colors.surface-container-high') 100%); }
+    .text-stroke { -webkit-text-stroke: 1px theme('colors.primary'); color: transparent; }
+    .btn-press:active { transform: translate(2px, 2px); box-shadow: none !important; }
+    @keyframes fly { 0% { transform: translateY(0px); } 50% { transform: translateY(-4px); } 100% { transform: translateY(0px); } }
+    .btn-fly { animation: fly 3s ease-in-out infinite; }
+    .btn-fly:hover { animation-duration: 1s; transform: translateY(-6px); box-shadow: 6px 6px 0px 0px rgba(0,0,0,0.2) !important; }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    .lang-btn { color: theme('colors.on-surface-variant'); }
+    .lang-btn.lang-active { background-color: theme('colors.primary'); color: theme('colors.on-primary'); }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased overflow-x-hidden selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-background border-b-2 border-primary shadow-[4px_4px_0px_0px_rgba(0,66,117,0.2)] full-width top-0 sticky z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full z-50 max-w-container-max mx-auto">
+<a href="index.html" class="font-display-lg text-headline-md md:text-headline-lg font-black text-secondary tracking-tighter uppercase shrink-0">
+                Haris Fasha PORTFOLIO
+            </a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-headline-md text-headline-md font-bold text-secondary border-b-2 border-secondary" data-i18n="nav.home" href="index.html">Home</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary transition-colors duration-200" data-i18n="nav.projects" href="proyek.html">Projects</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary transition-colors duration-200" data-i18n="nav.about" href="tentang.html">About</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary transition-colors duration-200" data-i18n="nav.contact" href="kontak.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-1 border-2 border-primary p-0.5">
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="id">ID</button>
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="en">EN</button>
+</div>
+<button id="theme-btn" class="hidden md:flex items-center justify-center w-10 h-10 border-2 border-primary text-primary hover:bg-primary hover:text-on-primary transition-colors" aria-label="Toggle dark mode">
+<span class="material-symbols-outlined" id="theme-icon" style="font-size:22px;">dark_mode</span>
+</button>
+<a class="hidden md:inline-flex bg-secondary text-on-secondary font-headline-md text-body-lg font-bold px-6 py-3 border-2 border-secondary shadow-hard-secondary hover:bg-on-secondary hover:text-secondary transition-all btn-press btn-fly" data-i18n="nav.hire" href="kontak.html">
+                Hire Me
+            </a>
+<button id="menu-btn" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false">
+<span class="material-symbols-outlined text-[32px]" id="menu-icon">menu</span>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden hidden flex-col bg-background border-t-2 border-primary px-margin-mobile py-4 gap-1">
+<a class="py-3 font-headline-md text-headline-md font-bold text-secondary" data-i18n="nav.home" href="index.html">Home</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.projects" href="proyek.html">Projects</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.about" href="tentang.html">About</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.contact" href="kontak.html">Contact</a>
+<div class="flex items-center gap-3 mt-3">
+<div class="flex items-center gap-1 border-2 border-primary p-0.5 w-fit">
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="id">ID</button>
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="en">EN</button>
+</div>
+<button id="theme-btn-mobile" class="flex items-center justify-center w-10 h-10 border-2 border-primary text-primary" aria-label="Toggle dark mode">
+<span class="material-symbols-outlined" id="theme-icon-mobile" style="font-size:22px;">dark_mode</span>
+</button>
+</div>
+<a class="mt-3 inline-flex justify-center bg-secondary text-on-secondary font-headline-md text-body-lg font-bold px-6 py-3 border-2 border-secondary shadow-hard-secondary" data-i18n="nav.hire" href="kontak.html">Hire Me</a>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] md:min-h-[921px] flex flex-col justify-center overflow-hidden hero-bg border-b-2 border-primary">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(theme('colors.primary') 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10 pt-16 pb-16 md:pt-section-gap md:pb-section-gap">
+<div class="col-span-1 md:col-span-8 flex flex-col justify-center items-start">
+<div class="inline-block bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md px-3 py-1 mb-6 border-2 border-on-surface">
+<span class="material-symbols-outlined align-middle mr-1 text-[18px]">verified</span>
+<span data-i18n="home.badge">READY FOR DEPLOYMENT</span>
+                    </div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase mb-6 leading-tight max-w-4xl relative">
+<span class="block text-stroke absolute top-[-40px] left-[-20px] opacity-20 text-[120px] whitespace-nowrap z-[-1] select-none hidden md:block">HOPE</span>
+                        MAN OF TOMORROW<br/>
+<span class="text-secondary relative inline-block">DESIGN
+                            <div class="absolute bottom-1 left-0 w-full h-[8px] bg-secondary opacity-20"></div>
+</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10 border-l-4 border-primary pl-4" data-i18n="home.hero.desc">
+                        Forging digital experiences with unwavering strength and visionary clarity. Bold interfaces, resilient architectures, and a commitment to protecting user experience at all costs.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary font-headline-md text-headline-md font-bold px-8 py-4 border-2 border-primary shadow-hard-primary hover:bg-background hover:text-primary transition-all btn-press btn-fly" data-i18n="home.hero.cta1" href="proyek.html">
+                            View Missions
+                        </a>
+<a class="bg-surface text-on-surface font-headline-md text-headline-md font-bold px-8 py-4 border-2 border-outline shadow-hard-sm hover:border-primary hover:text-primary transition-all btn-press flex items-center gap-2" href="kontak.html">
+<span data-i18n="home.hero.cta2">Signal Me</span>
+                            <span class="material-symbols-outlined">satellite_alt</span>
+</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 relative hidden md:block">
+<div class="absolute inset-0 bg-primary-container clip-diamond shadow-hard-primary border-4 border-background flex items-center justify-center transform hover:scale-105 transition-transform duration-500" style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); aspect-ratio: 1/1;">
+<img class="object-cover w-full h-full opacity-90 mix-blend-multiply" alt="Ilustrasi abstrak perisai geometris biru dan merah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXkxeabykEwv-rJHgc4sQzxEhnOJs6YYN5eS-9nQUpRpRapr32Z6tkOE5zS0r5d6H5h8tYs6nHqPVP7fw8URlnHYOuB4Go_XsVwQofNrsou51F7PqYpxi6wVUwL9TBhXZfM3_7Zr4oDXnzQQ1TLtXgWV0NHT4RaKbVpoQy-p1DwSdJaW3wHlhGmxmqyJnwXtM6GIKMT2rAJyfR3BPf19wijyZS4okoGsrS0OY2hHazo8kwIjatwcg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-16 md:py-section-gap bg-background" id="projects">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 border-b-4 border-primary pb-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase" data-i18n="home.projects.title">Recent Directives</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2" data-i18n="home.projects.subtitle">Classified missions executed with precision.</p>
+</div>
+<a class="flex items-center gap-2 mt-4 md:mt-0 font-headline-md text-body-lg text-secondary hover:underline underline-offset-4 decoration-2" href="proyek.html">
+<span data-i18n="home.projects.viewall">View Full Archives</span> <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:auto-rows-[300px]">
+<div class="col-span-1 md:col-span-8 md:row-span-2 group relative border-2 border-primary bg-surface overflow-hidden shadow-hard-primary cursor-pointer min-h-[300px]">
+<div class="absolute inset-0 bg-primary-container mix-blend-multiply opacity-20 group-hover:opacity-0 transition-opacity z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 z-0" alt="Dashboard analitik data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBawIdTrs-ZVf_LIdgqBOgz5-raGjLbnyOnQhYxjxAbpiCSVfU4APMdDggOSXeUiSEJ5ENuBpzNGU5fLDXqWXCpQ8J02m3i_xuuldaQcHP7aQ6sMo9CbGsy7qSfjDMkWc7Ja3TyIyYewDIZRyl2rEQRHzTtxgw08ZEY9BBH3PsD53GpY3J7vNxtD5QXlQ47h5DMsWqSH8oeNLOZjfnTreH0oz3QMomI95U22KWV-E6R-6UFX1zVFJ4"/>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-background via-background/90 to-transparent z-20 translate-y-2 group-hover:translate-y-0 transition-transform">
+<div class="flex gap-2 mb-3">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-[12px] px-2 py-1 uppercase border border-on-surface" data-i18n="home.card1.tag1">Data Ops</span>
+<span class="bg-surface text-primary font-label-md text-[12px] px-2 py-1 uppercase border border-primary">React</span>
+</div>
+<h3 class="font-headline-md text-headline-lg text-primary mb-2" data-i18n="home.card1.title">Fortress Analytics Platform</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl line-clamp-2" data-i18n="home.card1.desc">A high-density data visualization suite designed for global monitoring and rapid response deployment.</p>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 md:row-span-1 group relative border-2 border-outline hover:border-secondary bg-surface overflow-hidden shadow-hard-sm hover:shadow-hard-secondary transition-all cursor-pointer min-h-[220px]">
+<div class="absolute inset-0 bg-secondary mix-blend-multiply opacity-10 group-hover:opacity-0 transition-opacity z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 z-0" alt="Aplikasi mobile kebugaran" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtZKZKqo8NXm4o_hXw6cJAINgr8A2Pb8wRoFzstV6GGpv5RhcPGhSkO7AiTWY6ig4Q2vBObkVYR_4H9mVYpWuLKhIaW12psM6c1U1QOg_4g5oa4JXljgjTNJskMu-7giCdLK7DHABCT99jmut48tJCrpyDFlIMojjCk_27xveWlbZgWJKjMtgt8yAbL6GmBkteaKyFYOauaaZMRiz6vUB4jl8T98kycGasv-D7wdY3Dm5dqW_hzEQ"/>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-background border-t-2 border-outline group-hover:border-secondary z-20">
+<h3 class="font-headline-md text-body-lg text-on-surface mb-1 group-hover:text-secondary transition-colors" data-i18n="home.card2.title">Krypton Fitness App</h3>
+<p class="font-label-md text-[12px] text-outline uppercase" data-i18n="home.card2.category">UX/UI Design</p>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 md:row-span-1 relative border-2 border-primary bg-primary text-on-primary overflow-hidden shadow-hard-primary p-6 flex flex-col justify-between group min-h-[220px]">
+<div class="absolute top-0 right-0 p-4 opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-[48px]">deployed_code</span>
+</div>
+<div>
+<span class="font-label-md text-[12px] text-primary-fixed-dim uppercase tracking-widest block mb-2" data-i18n="home.card3.tag">Experimental</span>
+<h3 class="font-headline-md text-headline-md mb-2 leading-tight" data-i18n="home.card3.title">Project<br>Daily Planet</h3>
+</div>
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-tertiary-fixed hover:text-on-primary transition-colors" href="proyek.html">
+<span data-i18n="home.card3.cta">Read Case Study</span> <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary border-t-4 border-secondary mt-16 md:mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-margin-mobile md:px-margin-desktop py-gutter w-full max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md font-black text-tertiary-fixed uppercase">
+                KAL-EL PORTFOLIO
+            </div>
+<div class="font-body-md text-body-md text-on-primary opacity-80 text-center" data-i18n="footer.copyright">
+                © 2024 MAN OF STEEL DESIGN. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.privacy" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.terms" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.accessibility" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('flex');
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        menuIcon.textContent = isOpen ? 'menu' : 'close';
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+</script>
+<script src="i18n.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

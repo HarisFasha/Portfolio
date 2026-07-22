@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="light" lang="id">
+<head>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('site-theme');
+    if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  } catch(e){}
+})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kal-El Portfolio — Proyek</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Montserrat:wght@700;900&family=Source+Sans+3:wght@400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "background": "rgb(var(--c-background) / <alpha-value>)", "on-background": "rgb(var(--c-on-background) / <alpha-value>)", "surface": "rgb(var(--c-surface) / <alpha-value>)",
+                    "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)", "on-surface-variant": "rgb(var(--c-on-surface-variant) / <alpha-value>)", "surface-variant": "rgb(var(--c-surface-variant) / <alpha-value>)",
+                    "surface-container-lowest": "rgb(var(--c-surface-container-lowest) / <alpha-value>)", "surface-container-low": "rgb(var(--c-surface-container-low) / <alpha-value>)", "surface-container": "rgb(var(--c-surface-container) / <alpha-value>)",
+                    "surface-container-high": "rgb(var(--c-surface-container-high) / <alpha-value>)", "surface-container-highest": "rgb(var(--c-surface-container-highest) / <alpha-value>)", "surface-bright": "rgb(var(--c-surface-bright) / <alpha-value>)",
+                    "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)", "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)", "outline": "rgb(var(--c-outline) / <alpha-value>)",
+                    "outline-variant": "rgb(var(--c-outline-variant) / <alpha-value>)", "primary": "rgb(var(--c-primary) / <alpha-value>)", "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)",
+                    "primary-container": "rgb(var(--c-primary-container) / <alpha-value>)", "on-primary-container": "rgb(var(--c-on-primary-container) / <alpha-value>)", "primary-fixed": "rgb(var(--c-primary-fixed) / <alpha-value>)",
+                    "on-primary-fixed": "rgb(var(--c-on-primary-fixed) / <alpha-value>)", "primary-fixed-dim": "rgb(var(--c-primary-fixed-dim) / <alpha-value>)", "on-primary-fixed-variant": "rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)",
+                    "secondary": "rgb(var(--c-secondary) / <alpha-value>)", "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)", "secondary-container": "rgb(var(--c-secondary-container) / <alpha-value>)",
+                    "on-secondary-container": "rgb(var(--c-on-secondary-container) / <alpha-value>)", "secondary-fixed": "rgb(var(--c-secondary-fixed) / <alpha-value>)", "on-secondary-fixed": "rgb(var(--c-on-secondary-fixed) / <alpha-value>)",
+                    "secondary-fixed-dim": "rgb(var(--c-secondary-fixed-dim) / <alpha-value>)", "on-secondary-fixed-variant": "rgb(var(--c-on-secondary-fixed-variant) / <alpha-value>)", "tertiary": "rgb(var(--c-tertiary) / <alpha-value>)",
+                    "on-tertiary": "rgb(var(--c-on-tertiary) / <alpha-value>)", "tertiary-container": "rgb(var(--c-tertiary-container) / <alpha-value>)", "on-tertiary-container": "rgb(var(--c-on-tertiary-container) / <alpha-value>)",
+                    "tertiary-fixed": "rgb(var(--c-tertiary-fixed) / <alpha-value>)", "on-tertiary-fixed": "rgb(var(--c-on-tertiary-fixed) / <alpha-value>)", "tertiary-fixed-dim": "rgb(var(--c-tertiary-fixed-dim) / <alpha-value>)",
+                    "on-tertiary-fixed-variant": "rgb(var(--c-on-tertiary-fixed-variant) / <alpha-value>)", "error": "rgb(var(--c-error) / <alpha-value>)", "on-error": "rgb(var(--c-on-error) / <alpha-value>)",
+                    "error-container": "rgb(var(--c-error-container) / <alpha-value>)", "on-error-container": "rgb(var(--c-on-error-container) / <alpha-value>)", "inverse-surface": "rgb(var(--c-inverse-surface) / <alpha-value>)",
+                    "inverse-on-surface": "rgb(var(--c-inverse-on-surface) / <alpha-value>)", "inverse-primary": "rgb(var(--c-inverse-primary) / <alpha-value>)"
+                },
+                "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                "spacing": { "section-gap": "120px", "margin-desktop": "64px", "container-max": "1280px", "margin-mobile": "16px", "base": "8px", "gutter": "24px" },
+                "fontFamily": {
+                    "display-lg": ["Montserrat"], "headline-md": ["Montserrat"], "label-md": ["JetBrains Mono"],
+                    "display-lg-mobile": ["Montserrat"], "body-lg": ["\"Source Sans 3\""], "headline-lg": ["Montserrat"], "body-md": ["\"Source Sans 3\""]
+                },
+                "fontSize": {
+                    "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "900" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                    "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                    "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "900" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                }
+            }
+        }
+    }
+</script>
+<style>
+:root {
+    --c-background: 248 249 250;
+    --c-on-background: 25 28 29;
+    --c-surface: 248 249 250;
+    --c-on-surface: 25 28 29;
+    --c-on-surface-variant: 65 71 80;
+    --c-surface-variant: 225 227 228;
+    --c-surface-container-lowest: 255 255 255;
+    --c-surface-container-low: 243 244 245;
+    --c-surface-container: 237 238 239;
+    --c-surface-container-high: 231 232 233;
+    --c-surface-container-highest: 225 227 228;
+    --c-surface-bright: 248 249 250;
+    --c-surface-dim: 217 218 219;
+    --c-surface-tint: 0 66 117;
+    --c-outline: 114 119 129;
+    --c-outline-variant: 193 199 210;
+    --c-primary: 0 66 117;
+    --c-on-primary: 255 255 255;
+    --c-primary-container: 0 90 156;
+    --c-on-primary-container: 175 209 255;
+    --c-primary-fixed: 210 228 255;
+    --c-on-primary-fixed: 0 28 55;
+    --c-primary-fixed-dim: 161 201 255;
+    --c-on-primary-fixed-variant: 0 72 127;
+    --c-secondary: 187 0 19;
+    --c-on-secondary: 255 255 255;
+    --c-secondary-container: 231 21 32;
+    --c-on-secondary-container: 255 251 255;
+    --c-secondary-fixed: 255 218 214;
+    --c-on-secondary-fixed: 65 0 2;
+    --c-secondary-fixed-dim: 255 180 171;
+    --c-on-secondary-fixed-variant: 147 0 13;
+    --c-tertiary: 112 93 0;
+    --c-on-tertiary: 255 255 255;
+    --c-tertiary-container: 200 169 0;
+    --c-on-tertiary-container: 75 62 0;
+    --c-tertiary-fixed: 255 225 109;
+    --c-on-tertiary-fixed: 34 27 0;
+    --c-tertiary-fixed-dim: 233 196 0;
+    --c-on-tertiary-fixed-variant: 84 70 0;
+    --c-error: 186 26 26;
+    --c-on-error: 255 255 255;
+    --c-error-container: 255 218 214;
+    --c-on-error-container: 147 0 10;
+    --c-inverse-surface: 46 49 50;
+    --c-inverse-on-surface: 240 241 242;
+    --c-inverse-primary: 161 201 255;
+}
+.dark {
+    --c-background: 17 20 21;
+    --c-on-background: 225 227 228;
+    --c-surface: 17 20 21;
+    --c-on-surface: 225 227 228;
+    --c-on-surface-variant: 193 199 210;
+    --c-surface-variant: 65 71 80;
+    --c-surface-container-lowest: 12 14 15;
+    --c-surface-container-low: 25 28 29;
+    --c-surface-container: 29 32 33;
+    --c-surface-container-high: 40 43 44;
+    --c-surface-container-highest: 51 54 55;
+    --c-surface-bright: 55 58 60;
+    --c-surface-dim: 17 20 21;
+    --c-surface-tint: 161 201 255;
+    --c-outline: 139 145 155;
+    --c-outline-variant: 65 71 80;
+    --c-primary: 161 201 255;
+    --c-on-primary: 0 45 84;
+    --c-primary-container: 0 72 127;
+    --c-on-primary-container: 210 228 255;
+    --c-primary-fixed: 210 228 255;
+    --c-on-primary-fixed: 0 28 55;
+    --c-primary-fixed-dim: 161 201 255;
+    --c-on-primary-fixed-variant: 0 72 127;
+    --c-secondary: 255 180 171;
+    --c-on-secondary: 105 0 5;
+    --c-secondary-container: 147 0 13;
+    --c-on-secondary-container: 255 218 214;
+    --c-secondary-fixed: 255 218 214;
+    --c-on-secondary-fixed: 65 0 2;
+    --c-secondary-fixed-dim: 255 180 171;
+    --c-on-secondary-fixed-variant: 147 0 13;
+    --c-tertiary: 233 196 0;
+    --c-on-tertiary: 58 47 0;
+    --c-tertiary-container: 84 70 0;
+    --c-on-tertiary-container: 255 225 109;
+    --c-tertiary-fixed: 255 225 109;
+    --c-on-tertiary-fixed: 34 27 0;
+    --c-tertiary-fixed-dim: 233 196 0;
+    --c-on-tertiary-fixed-variant: 84 70 0;
+    --c-error: 255 180 171;
+    --c-on-error: 105 0 5;
+    --c-error-container: 147 0 10;
+    --c-on-error-container: 255 218 214;
+    --c-inverse-surface: 225 227 228;
+    --c-inverse-on-surface: 46 49 50;
+    --c-inverse-primary: 0 66 117;
+}
+
+    .hard-shadow { box-shadow: 4px 4px 0px 0px rgba(0, 66, 117, 0.2); }
+    .hard-shadow-btn { box-shadow: 2px 2px 0px 0px rgba(0, 66, 117, 0.5); }
+    .hard-shadow-btn:active { box-shadow: 0px 0px 0px 0px rgba(0, 66, 117, 0.5); transform: translate(2px, 2px); }
+    .img-grayscale { filter: grayscale(100%); transition: filter 0.3s ease; }
+    .group:hover .img-grayscale { filter: grayscale(0%); }
+    @keyframes fly { 0% { transform: translateY(0); } 50% { transform: translateY(-6px); } 100% { transform: translateY(0); } }
+    .animate-fly { animation: fly 3s ease-in-out infinite; }
+    .animate-fly:active { animation: none; }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    .lang-btn { color: theme('colors.on-surface-variant'); }
+    .lang-btn.lang-active { background-color: theme('colors.primary'); color: theme('colors.on-primary'); }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-background full-width top-0 sticky border-b-2 border-primary shadow-[4px_4px_0px_0px_rgba(0,66,117,0.2)] z-50 transition-all duration-200">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-container-max mx-auto">
+<a class="font-display-lg-mobile md:font-display-lg text-headline-md font-black text-secondary" href="index.html">
+                KAL-EL PORTFOLIO
+            </a>
+<div class="hidden md:flex gap-8 items-center font-headline-md text-headline-md font-bold">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-surface-container-high px-3 py-1" data-i18n="nav.home" href="index.html">Home</a>
+<a class="text-secondary border-b-2 border-secondary font-bold hover:bg-surface-container-high px-3 py-1" data-i18n="nav.projects" href="proyek.html">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-surface-container-high px-3 py-1" data-i18n="nav.about" href="tentang.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 hover:bg-surface-container-high px-3 py-1" data-i18n="nav.contact" href="kontak.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-1 border-2 border-primary p-0.5">
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="id">ID</button>
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="en">EN</button>
+</div>
+<button id="theme-btn" class="hidden md:flex items-center justify-center w-10 h-10 border-2 border-primary text-primary hover:bg-primary hover:text-on-primary transition-colors" aria-label="Toggle dark mode">
+<span class="material-symbols-outlined" id="theme-icon" style="font-size:22px;">dark_mode</span>
+</button>
+<button class="animate-fly hidden md:flex items-center justify-center bg-primary text-on-primary font-label-md text-label-md px-6 py-3 border-2 border-primary hard-shadow-btn transition-all uppercase tracking-wider" data-i18n="nav.hire" onclick="location.href='kontak.html'">
+                Hire Me
+            </button>
+<button id="menu-btn" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false">
+<span class="material-symbols-outlined" id="menu-icon" style="font-variation-settings: 'FILL' 1; font-size: 32px;">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="md:hidden hidden flex-col bg-background border-t-2 border-primary px-margin-mobile py-4 gap-1">
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.home" href="index.html">Home</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-secondary" data-i18n="nav.projects" href="proyek.html">Projects</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.about" href="tentang.html">About</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.contact" href="kontak.html">Contact</a>
+<div class="flex items-center gap-3 mt-3">
+<div class="flex items-center gap-1 border-2 border-primary p-0.5 w-fit">
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="id">ID</button>
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="en">EN</button>
+</div>
+<button id="theme-btn-mobile" class="flex items-center justify-center w-10 h-10 border-2 border-primary text-primary" aria-label="Toggle dark mode">
+<span class="material-symbols-outlined" id="theme-icon-mobile" style="font-size:22px;">dark_mode</span>
+</button>
+</div>
+<a class="mt-3 inline-flex justify-center bg-primary text-on-primary font-headline-md text-body-lg font-bold px-6 py-3 border-2 border-primary hard-shadow-btn" data-i18n="nav.hire" href="kontak.html">Hire Me</a>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap">
+<section class="mb-16">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 uppercase tracking-tighter" data-i18n="projects.hero.title">Mission Logs</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl" data-i18n="projects.hero.desc">An archive of high-impact deployments. Each project represents a structural solution engineered for stability, scale, and uncompromising performance.</p>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<article class="col-span-1 md:col-span-8 group bg-surface-container-lowest border border-primary hard-shadow flex flex-col md:flex-row overflow-hidden relative">
+<div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover img-grayscale" alt="Ruang kendali sistem monitoring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrnyKSswLoGOo4ISzrzUjcAumJTwT9VhbKvdU5AJI4whTo-kuBy_gSeedoO_J7I0-wUb5dvOw41hB6Jsq5Ep2qTe-nQmqMXxdxWVacgets5kI5zgOiyHeT8SvEBpwbmqYT-CoROIIXBSXT9fsxG-op5tO-xI1-FeYSloSBcIQWpsVQwA-OrOd13t0mDpOlaPWSRtJSYZ1KA4OXHyQ1bidd1OKeTDu9RJOvRnyHrhwZCttBs-9ZUa0"/>
+</div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-between bg-primary-container text-on-primary">
+<div>
+<div class="flex gap-2 mb-4 flex-wrap">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md px-2 py-1 uppercase border border-on-tertiary-fixed" data-i18n="projects.card1.tag1">Enterprise UX</span>
+<span class="bg-surface-container text-on-surface font-label-md text-label-md px-2 py-1 uppercase border border-on-surface">React</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-white" data-i18n="projects.card1.title">Global Watchtower System</h2>
+<p class="font-body-md text-body-md text-on-primary-container opacity-90 mb-6" data-i18n="projects.card1.desc">A centralized dashboard for monitoring global satellite feeds. Engineered for zero-latency data rendering and high-contrast visibility in emergency scenarios.</p>
+</div>
+<button class="animate-fly self-start bg-secondary text-on-secondary font-label-md text-label-md px-6 py-3 border-2 border-secondary hard-shadow-btn transition-all uppercase tracking-wider flex items-center gap-2">
+<span data-i18n="projects.viewproject">View Project</span> <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+<article class="col-span-1 md:col-span-4 group bg-surface-container-lowest border border-primary hard-shadow flex flex-col overflow-hidden">
+<div class="w-full h-48 overflow-hidden border-b border-primary">
+<img class="w-full h-full object-cover img-grayscale" alt="Wireframe aplikasi mobile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiPkeruoUvE2pmPeAsEvdAXVrulji4Hdq3DThTvC2lHrEE2KwiiCde5FqdbhiY8ZPPaEydKp0oXghzGduvVbulBXmNw5dJ2RnI3DhA0UsjMUQgz6JNbFIrfq_3UqF2yp_AGF2tfErpvF1xwyHEVzAJ42f9NxI-dduIbQfm0RNbWXbovIfTcL3Ch1WfPTG2lTSMInKs_U3h0AbnUYoBvk_B_gpCfgVzI6FUJSF-2OwMfoSwhFAbEgg"/>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-[12px] px-2 py-1 uppercase border border-on-tertiary-fixed" data-i18n="projects.card2.tag">Mobile App</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-2 text-primary" data-i18n="projects.card2.title">Daily Planet Reader</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="projects.card2.desc">A mobile-first news aggregation platform designed for rapid consumption and uncompromising journalistic integrity.</p>
+</div>
+<a class="font-label-md text-label-md text-secondary uppercase hover:underline decoration-2 underline-offset-4 flex items-center gap-1" href="#">
+<span data-i18n="projects.casestudy">Case Study</span> <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</article>
+<article class="col-span-1 md:col-span-4 group bg-surface-container-lowest border border-primary hard-shadow flex flex-col overflow-hidden">
+<div class="w-full h-48 overflow-hidden border-b border-primary">
+<img class="w-full h-full object-cover img-grayscale" alt="Gedung data center modern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWe8NN-0ZlqZFIAANSzPSIcPntoFTiSrooiyABV6n22bDWterLl7JsGOBge0RW6bgijaPDP15wTWPZgexjo5DEoz1V6jAwOT6Zso3PtxkU1SneLT12J7PNSLbvFEmHAx60oWzyEK95ut39yTa10se6q4BqEHflmANq83q2thXqLzOEdZFSbVRtFi2LSXB9KutM90H9QzZ29v8EXqKH9ynik6AuqAeZmbnTEwWksKtFV4rXOwP6WFk"/>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between bg-surface-container-low">
+<div>
+<div class="flex gap-2 mb-3">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-[12px] px-2 py-1 uppercase border border-on-tertiary-fixed" data-i18n="projects.card3.tag">Infrastructure</span>
+</div>
+<h2 class="font-headline-md text-headline-md mb-2 text-primary" data-i18n="projects.card3.title">Fortress Archives</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="projects.card3.desc">Immutable data storage UI interface, designed to interact with crystalline memory arrays for long-term historical preservation.</p>
+</div>
+<a class="font-label-md text-label-md text-secondary uppercase hover:underline decoration-2 underline-offset-4 flex items-center gap-1" href="#">
+<span data-i18n="projects.casestudy">Case Study</span> <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</article>
+<article class="col-span-1 md:col-span-8 group bg-surface-container-lowest border border-primary hard-shadow flex flex-col md:flex-row-reverse overflow-hidden">
+<div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden border-b md:border-b-0 md:border-l border-primary">
+<img class="w-full h-full object-cover img-grayscale" alt="Antarmuka checkout e-commerce" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGwc3kK3D7OLq6B5rkYAAW2qi0zITo-40SBad1MIIe4CRKruxL1UsZRuLTR-HpX6cdPAyvYr79RbS84QSAm5UepOnUEt3DPJrI-NH1z3fD3rf2iYkmGmdLpxLnoNg3Vj-jSvqLJhDvOeGjkfUlR3E6uSH0Od-z71tPD7IL_iDW1O6344P6IXfEK80KkTrJYNZveZTwhLQ_sCisCd9YiRXMQ1BJaFLA_rCsMjl9Xmf7850Hq97sOPA"/>
+</div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<div class="flex gap-2 mb-4 flex-wrap">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md px-2 py-1 uppercase border border-on-tertiary-fixed" data-i18n="projects.card4.tag1">FinTech UI</span>
+<span class="bg-surface-container text-on-surface font-label-md text-label-md px-2 py-1 uppercase border border-on-surface">Web3</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-primary" data-i18n="projects.card4.title">Kryptonian Ledger</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6" data-i18n="projects.card4.desc">A secure, decentralized transaction portal. Features high-contrast structural design to guide users through complex financial flows with absolute clarity and confidence.</p>
+</div>
+<button class="animate-fly self-start bg-primary text-on-primary font-label-md text-label-md px-6 py-3 border-2 border-primary hard-shadow-btn transition-all uppercase tracking-wider flex items-center gap-2">
+<span data-i18n="projects.viewproject">View Project</span> <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary font-body-md text-body-md mt-16 md:mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-margin-mobile md:px-margin-desktop py-gutter w-full max-w-container-max mx-auto">
+<span class="font-headline-lg text-headline-lg text-tertiary-fixed">
+            KAL-EL PORTFOLIO
+        </span>
+<span class="opacity-80 text-center" data-i18n="footer.copyright">© 2024 MAN OF STEEL DESIGN. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-6">
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.privacy" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.terms" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.accessibility" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('flex');
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        menuIcon.textContent = isOpen ? 'menu' : 'close';
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+</script>
+<script src="i18n.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>

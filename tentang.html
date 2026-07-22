@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="id">
+<head>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('site-theme');
+    if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    }
+  } catch(e){}
+})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kal-El Portfolio — Tentang Saya</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=JetBrains+Mono:wght@500&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+    --c-background: 248 249 250;
+    --c-on-background: 25 28 29;
+    --c-surface: 248 249 250;
+    --c-on-surface: 25 28 29;
+    --c-on-surface-variant: 65 71 80;
+    --c-surface-variant: 225 227 228;
+    --c-surface-container-lowest: 255 255 255;
+    --c-surface-container-low: 243 244 245;
+    --c-surface-container: 237 238 239;
+    --c-surface-container-high: 231 232 233;
+    --c-surface-container-highest: 225 227 228;
+    --c-surface-bright: 248 249 250;
+    --c-surface-dim: 217 218 219;
+    --c-surface-tint: 0 66 117;
+    --c-outline: 114 119 129;
+    --c-outline-variant: 193 199 210;
+    --c-primary: 0 66 117;
+    --c-on-primary: 255 255 255;
+    --c-primary-container: 0 90 156;
+    --c-on-primary-container: 175 209 255;
+    --c-primary-fixed: 210 228 255;
+    --c-on-primary-fixed: 0 28 55;
+    --c-primary-fixed-dim: 161 201 255;
+    --c-on-primary-fixed-variant: 0 72 127;
+    --c-secondary: 187 0 19;
+    --c-on-secondary: 255 255 255;
+    --c-secondary-container: 231 21 32;
+    --c-on-secondary-container: 255 251 255;
+    --c-secondary-fixed: 255 218 214;
+    --c-on-secondary-fixed: 65 0 2;
+    --c-secondary-fixed-dim: 255 180 171;
+    --c-on-secondary-fixed-variant: 147 0 13;
+    --c-tertiary: 112 93 0;
+    --c-on-tertiary: 255 255 255;
+    --c-tertiary-container: 200 169 0;
+    --c-on-tertiary-container: 75 62 0;
+    --c-tertiary-fixed: 255 225 109;
+    --c-on-tertiary-fixed: 34 27 0;
+    --c-tertiary-fixed-dim: 233 196 0;
+    --c-on-tertiary-fixed-variant: 84 70 0;
+    --c-error: 186 26 26;
+    --c-on-error: 255 255 255;
+    --c-error-container: 255 218 214;
+    --c-on-error-container: 147 0 10;
+    --c-inverse-surface: 46 49 50;
+    --c-inverse-on-surface: 240 241 242;
+    --c-inverse-primary: 161 201 255;
+}
+.dark {
+    --c-background: 17 20 21;
+    --c-on-background: 225 227 228;
+    --c-surface: 17 20 21;
+    --c-on-surface: 225 227 228;
+    --c-on-surface-variant: 193 199 210;
+    --c-surface-variant: 65 71 80;
+    --c-surface-container-lowest: 12 14 15;
+    --c-surface-container-low: 25 28 29;
+    --c-surface-container: 29 32 33;
+    --c-surface-container-high: 40 43 44;
+    --c-surface-container-highest: 51 54 55;
+    --c-surface-bright: 55 58 60;
+    --c-surface-dim: 17 20 21;
+    --c-surface-tint: 161 201 255;
+    --c-outline: 139 145 155;
+    --c-outline-variant: 65 71 80;
+    --c-primary: 161 201 255;
+    --c-on-primary: 0 45 84;
+    --c-primary-container: 0 72 127;
+    --c-on-primary-container: 210 228 255;
+    --c-primary-fixed: 210 228 255;
+    --c-on-primary-fixed: 0 28 55;
+    --c-primary-fixed-dim: 161 201 255;
+    --c-on-primary-fixed-variant: 0 72 127;
+    --c-secondary: 255 180 171;
+    --c-on-secondary: 105 0 5;
+    --c-secondary-container: 147 0 13;
+    --c-on-secondary-container: 255 218 214;
+    --c-secondary-fixed: 255 218 214;
+    --c-on-secondary-fixed: 65 0 2;
+    --c-secondary-fixed-dim: 255 180 171;
+    --c-on-secondary-fixed-variant: 147 0 13;
+    --c-tertiary: 233 196 0;
+    --c-on-tertiary: 58 47 0;
+    --c-tertiary-container: 84 70 0;
+    --c-on-tertiary-container: 255 225 109;
+    --c-tertiary-fixed: 255 225 109;
+    --c-on-tertiary-fixed: 34 27 0;
+    --c-tertiary-fixed-dim: 233 196 0;
+    --c-on-tertiary-fixed-variant: 84 70 0;
+    --c-error: 255 180 171;
+    --c-on-error: 105 0 5;
+    --c-error-container: 147 0 10;
+    --c-on-error-container: 255 218 214;
+    --c-inverse-surface: 225 227 228;
+    --c-inverse-on-surface: 46 49 50;
+    --c-inverse-primary: 0 66 117;
+}
+
+    @keyframes fly { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+    .btn-fly { animation: fly 3s ease-in-out infinite; will-change: transform; }
+    .btn-fly:hover { animation: none; transform: translateY(-8px); }
+    #mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    .lang-btn { color: theme('colors.on-surface-variant'); }
+    .lang-btn.lang-active { background-color: theme('colors.primary'); color: theme('colors.on-primary'); }
+</style>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "background": "rgb(var(--c-background) / <alpha-value>)", "on-background": "rgb(var(--c-on-background) / <alpha-value>)", "surface": "rgb(var(--c-surface) / <alpha-value>)",
+                    "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)", "on-surface-variant": "rgb(var(--c-on-surface-variant) / <alpha-value>)", "surface-variant": "rgb(var(--c-surface-variant) / <alpha-value>)",
+                    "surface-container-lowest": "rgb(var(--c-surface-container-lowest) / <alpha-value>)", "surface-container-low": "rgb(var(--c-surface-container-low) / <alpha-value>)", "surface-container": "rgb(var(--c-surface-container) / <alpha-value>)",
+                    "surface-container-high": "rgb(var(--c-surface-container-high) / <alpha-value>)", "surface-container-highest": "rgb(var(--c-surface-container-highest) / <alpha-value>)", "surface-bright": "rgb(var(--c-surface-bright) / <alpha-value>)",
+                    "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)", "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)", "outline": "rgb(var(--c-outline) / <alpha-value>)",
+                    "outline-variant": "rgb(var(--c-outline-variant) / <alpha-value>)", "primary": "rgb(var(--c-primary) / <alpha-value>)", "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)",
+                    "primary-container": "rgb(var(--c-primary-container) / <alpha-value>)", "on-primary-container": "rgb(var(--c-on-primary-container) / <alpha-value>)", "primary-fixed": "rgb(var(--c-primary-fixed) / <alpha-value>)",
+                    "on-primary-fixed": "rgb(var(--c-on-primary-fixed) / <alpha-value>)", "primary-fixed-dim": "rgb(var(--c-primary-fixed-dim) / <alpha-value>)", "on-primary-fixed-variant": "rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)",
+                    "secondary": "rgb(var(--c-secondary) / <alpha-value>)", "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)", "secondary-container": "rgb(var(--c-secondary-container) / <alpha-value>)",
+                    "on-secondary-container": "rgb(var(--c-on-secondary-container) / <alpha-value>)", "secondary-fixed": "rgb(var(--c-secondary-fixed) / <alpha-value>)", "on-secondary-fixed": "rgb(var(--c-on-secondary-fixed) / <alpha-value>)",
+                    "secondary-fixed-dim": "rgb(var(--c-secondary-fixed-dim) / <alpha-value>)", "on-secondary-fixed-variant": "rgb(var(--c-on-secondary-fixed-variant) / <alpha-value>)", "tertiary": "rgb(var(--c-tertiary) / <alpha-value>)",
+                    "on-tertiary": "rgb(var(--c-on-tertiary) / <alpha-value>)", "tertiary-container": "rgb(var(--c-tertiary-container) / <alpha-value>)", "on-tertiary-container": "rgb(var(--c-on-tertiary-container) / <alpha-value>)",
+                    "tertiary-fixed": "rgb(var(--c-tertiary-fixed) / <alpha-value>)", "on-tertiary-fixed": "rgb(var(--c-on-tertiary-fixed) / <alpha-value>)", "tertiary-fixed-dim": "rgb(var(--c-tertiary-fixed-dim) / <alpha-value>)",
+                    "on-tertiary-fixed-variant": "rgb(var(--c-on-tertiary-fixed-variant) / <alpha-value>)", "error": "rgb(var(--c-error) / <alpha-value>)", "on-error": "rgb(var(--c-on-error) / <alpha-value>)",
+                    "error-container": "rgb(var(--c-error-container) / <alpha-value>)", "on-error-container": "rgb(var(--c-on-error-container) / <alpha-value>)", "inverse-surface": "rgb(var(--c-inverse-surface) / <alpha-value>)",
+                    "inverse-on-surface": "rgb(var(--c-inverse-on-surface) / <alpha-value>)", "inverse-primary": "rgb(var(--c-inverse-primary) / <alpha-value>)"
+                },
+                "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                "spacing": { "section-gap": "120px", "margin-desktop": "64px", "container-max": "1280px", "margin-mobile": "16px", "base": "8px", "gutter": "24px" },
+                "fontFamily": {
+                    "display-lg": ["Montserrat"], "headline-md": ["Montserrat"], "label-md": ["JetBrains Mono"],
+                    "display-lg-mobile": ["Montserrat"], "body-lg": ["\"Source Sans 3\""], "headline-lg": ["Montserrat"], "body-md": ["\"Source Sans 3\""]
+                },
+                "fontSize": {
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "900"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                }
+            }
+        }
+    }
+</script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-background border-b-2 border-primary shadow-[4px_4px_0px_0px_rgba(0,66,117,0.2)] full-width top-0 sticky z-50">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full z-50 max-w-container-max mx-auto">
+<a href="index.html" class="font-display-lg text-headline-md md:text-headline-lg font-black text-secondary tracking-tighter uppercase shrink-0">
+            KAL-EL PORTFOLIO
+        </a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary transition-colors duration-200" data-i18n="nav.home" href="index.html">Home</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary transition-colors duration-200" data-i18n="nav.projects" href="proyek.html">Projects</a>
+<a class="font-headline-md text-headline-md font-bold text-secondary border-b-2 border-secondary" data-i18n="nav.about" href="tentang.html">About</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary transition-colors duration-200" data-i18n="nav.contact" href="kontak.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-1 border-2 border-primary p-0.5">
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="id">ID</button>
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="en">EN</button>
+</div>
+<button id="theme-btn" class="hidden md:flex items-center justify-center w-10 h-10 border-2 border-primary text-primary hover:bg-primary hover:text-on-primary transition-colors" aria-label="Toggle dark mode">
+<span class="material-symbols-outlined" id="theme-icon" style="font-size:22px;">dark_mode</span>
+</button>
+<button class="hidden md:inline-flex btn-fly bg-primary text-on-primary px-6 py-3 font-headline-md text-headline-md font-bold shadow-[2px_2px_0px_0px_rgba(187,0,19,1)] hover:shadow-[0_8px_16px_rgba(187,0,19,0.3)] transition-all duration-300" data-i18n="nav.hire" onclick="location.href='kontak.html'">Hire Me</button>
+<button id="menu-btn" class="md:hidden text-primary" aria-label="Toggle menu" aria-expanded="false">
+<span class="material-symbols-outlined text-[32px]" id="menu-icon">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="md:hidden hidden flex-col bg-background border-t-2 border-primary px-margin-mobile py-4 gap-1">
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.home" href="index.html">Home</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.projects" href="proyek.html">Projects</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-secondary" data-i18n="nav.about" href="tentang.html">About</a>
+<a class="py-3 font-headline-md text-headline-md font-bold text-on-surface-variant hover:text-primary" data-i18n="nav.contact" href="kontak.html">Contact</a>
+<div class="flex items-center gap-3 mt-3">
+<div class="flex items-center gap-1 border-2 border-primary p-0.5 w-fit">
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="id">ID</button>
+<button class="lang-btn font-label-md text-label-md px-3 py-1.5 transition-colors" data-lang="en">EN</button>
+</div>
+<button id="theme-btn-mobile" class="flex items-center justify-center w-10 h-10 border-2 border-primary text-primary" aria-label="Toggle dark mode">
+<span class="material-symbols-outlined" id="theme-icon-mobile" style="font-size:22px;">dark_mode</span>
+</button>
+</div>
+<a class="mt-3 inline-flex justify-center bg-secondary text-on-secondary font-headline-md text-body-lg font-bold px-6 py-3 border-2 border-secondary shadow-[4px_4px_0px_0px_rgba(0,66,117,1)]" data-i18n="nav.hire" href="kontak.html">Hire Me</a>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 space-y-8 order-2 md:order-1">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary uppercase" data-i18n="about.hero.title">
+                Forged in <br><span class="text-secondary">Integrity</span>. <br>Designed for <span class="text-tertiary-container">Impact</span>.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl" data-i18n="about.hero.desc">
+                I am Kal-El, a product designer committed to building digital experiences that stand the test of time. My approach marries uncompromising structural stability with bold, human-centric aesthetics. Every pixel, every interaction, is engineered with purpose.
+            </p>
+<div class="flex gap-4">
+<button class="btn-fly bg-secondary text-on-primary px-8 py-4 font-headline-md text-headline-md font-bold shadow-[4px_4px_0px_0px_rgba(0,66,117,1)] hover:shadow-[0_12px_24px_rgba(0,66,117,0.3)] transition-all duration-300 uppercase tracking-wide" data-i18n="about.hero.cta">
+                    View Manifesto
+                </button>
+</div>
+</div>
+<div class="md:col-span-5 relative order-1 md:order-2">
+<div class="absolute inset-0 bg-primary transform translate-x-4 translate-y-4 -z-10"></div>
+<img class="w-full h-auto object-cover border-2 border-primary shadow-[8px_8px_0px_0px_rgba(187,0,19,1)] grayscale hover:grayscale-0 transition-all duration-500" alt="Potret profesional desainer produk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVNT6cHHMdUL12mnylekC3nRXF3d7Atryi3N1eV918wsfxXI5dX3ij-SK_IJk_TjijUdy8McZIDB205MDGNG68YmrV5WgfOLbf8xMsjaXGLf6DHdXdMqlLuDTgzt4N_469rrKBIf9NI2wWxw7TWwhUSF9ju-V6WzUTJSn18Aeal2Sh16KAgbhon7HLi0UKvgR-vAsCR05dCkjSE9n3TYHvsdrCV9SbW-mmH8rCvRWb3fYdzXg78C0"/>
+</div>
+</section>
+<!-- Principles Section -->
+<section class="bg-surface-container-low py-16 md:py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12 uppercase border-l-8 border-secondary pl-4" data-i18n="about.principles.title">Core Directives</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 bg-primary-container text-on-primary p-8 border-2 border-primary shadow-[4px_4px_0px_0px_rgba(187,0,19,1)] relative overflow-hidden group">
+<div class="absolute top-4 right-4 text-tertiary-fixed opacity-50 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined" style="font-size: 48px;">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-tertiary-fixed uppercase" data-i18n="about.principle1.title">Unyielding Structure</h3>
+<p class="font-body-lg text-body-lg max-w-xl" data-i18n="about.principle1.desc">
+                        Design must first be resilient. I architect interfaces that do not break under pressure, ensuring robust user flows and bulletproof technical execution before applying aesthetic layers.
+                    </p>
+</div>
+<div class="md:col-span-4 bg-surface text-on-surface p-8 border-2 border-primary shadow-[4px_4px_0px_0px_rgba(0,66,117,1)]">
+<div class="text-secondary mb-4">
+<span class="material-symbols-outlined" style="font-size: 40px; font-variation-settings: 'FILL' 1;">visibility</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 text-primary uppercase" data-i18n="about.principle2.title">Absolute Clarity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="about.principle2.desc">
+                        Truth in design means eliminating noise. High-contrast typography and intentional white space guide the user flawlessly.
+                    </p>
+</div>
+<div class="md:col-span-4 bg-tertiary-container text-on-tertiary-container p-8 border-2 border-primary shadow-[4px_4px_0px_0px_rgba(0,66,117,1)]">
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined" style="font-size: 40px; font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 text-primary uppercase" data-i18n="about.principle3.title">Empowering UX</h3>
+<p class="font-body-md text-body-md" data-i18n="about.principle3.desc">
+                        Every interaction should make the user feel capable and in control. Design should elevate, never frustrate.
+                    </p>
+</div>
+<div class="md:col-span-8 bg-surface text-on-surface p-8 border-2 border-primary shadow-[4px_4px_0px_0px_rgba(187,0,19,1)] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+<div>
+<h3 class="font-headline-md text-headline-md mb-4 text-secondary uppercase" data-i18n="about.principle4.title">Velocity &amp; Precision</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg" data-i18n="about.principle4.desc">
+                            Faster than a speeding bullet. Performance is a design feature. I prioritize lightweight assets and instantaneous feedback loops.
+                        </p>
+</div>
+<div class="hidden md:block text-outline opacity-20">
+<span class="material-symbols-outlined" style="font-size: 120px;">bolt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b-4 border-primary pb-4 gap-4">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase" data-i18n="about.skills.title">Capabilities Matrix</h2>
+<div class="font-label-md text-label-md bg-tertiary-fixed text-on-tertiary-fixed px-4 py-2 uppercase shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]" data-i18n="about.skills.status">
+                SYSTEM_STATUS: OPTIMAL
+            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-12">
+<div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-6 uppercase flex items-center gap-2">
+<span class="material-symbols-outlined">design_services</span> <span data-i18n="about.skills.cat1">UX/UI Architecture</span>
+                </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase" data-i18n="about.skills.designsystems">Design Systems</span>
+<span class="font-label-md text-label-md text-outline-variant">95%</span>
+</div>
+<div class="w-full h-4 bg-surface-container-high border border-outline-variant">
+<div class="h-full bg-secondary shadow-[2px_2px_0px_0px_rgba(0,66,117,1)]" style="width: 95%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase" data-i18n="about.skills.prototyping">Prototyping</span>
+<span class="font-label-md text-label-md text-outline-variant">90%</span>
+</div>
+<div class="w-full h-4 bg-surface-container-high border border-outline-variant">
+<div class="h-full bg-secondary shadow-[2px_2px_0px_0px_rgba(0,66,117,1)]" style="width: 90%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase" data-i18n="about.skills.research">User Research</span>
+<span class="font-label-md text-label-md text-outline-variant">85%</span>
+</div>
+<div class="w-full h-4 bg-surface-container-high border border-outline-variant">
+<div class="h-full bg-secondary shadow-[2px_2px_0px_0px_rgba(0,66,117,1)]" style="width: 85%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-6 uppercase flex items-center gap-2">
+<span class="material-symbols-outlined">code</span> <span data-i18n="about.skills.cat2">Technical Execution</span>
+                </h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase">Frontend (HTML/CSS/JS)</span>
+<span class="font-label-md text-label-md text-outline-variant">88%</span>
+</div>
+<div class="w-full h-4 bg-surface-container-high border border-outline-variant">
+<div class="h-full bg-primary shadow-[2px_2px_0px_0px_rgba(187,0,19,1)]" style="width: 88%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase" data-i18n="about.skills.tailwind">Tailwind Frameworks</span>
+<span class="font-label-md text-label-md text-outline-variant">92%</span>
+</div>
+<div class="w-full h-4 bg-surface-container-high border border-outline-variant">
+<div class="h-full bg-primary shadow-[2px_2px_0px_0px_rgba(187,0,19,1)]" style="width: 92%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase" data-i18n="about.skills.motion">Motion Design</span>
+<span class="font-label-md text-label-md text-outline-variant">80%</span>
+</div>
+<div class="w-full h-4 bg-surface-container-high border border-outline-variant">
+<div class="h-full bg-primary shadow-[2px_2px_0px_0px_rgba(187,0,19,1)]" style="width: 80%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary font-body-md text-body-md mt-16 md:mt-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 px-margin-mobile md:px-margin-desktop py-gutter w-full max-w-container-max mx-auto">
+<div class="font-headline-lg text-headline-lg text-tertiary-fixed">
+            KAL-EL
+        </div>
+<div class="text-center opacity-80" data-i18n="footer.copyright">
+            © 2024 MAN OF STEEL DESIGN. ALL RIGHTS RESERVED.
+        </div>
+<nav class="flex gap-4">
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.privacy" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.terms" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-80 hover:opacity-100 hover:text-tertiary-fixed transition-colors duration-200" data-i18n="footer.accessibility" href="#">Accessibility</a>
+</nav>
+</div>
+</footer>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('flex');
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+        menuIcon.textContent = isOpen ? 'menu' : 'close';
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+</script>
+<script src="i18n.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>
