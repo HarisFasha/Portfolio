@@ -10,7 +10,7 @@ const translations = {
         "nav.contact": "Kontak",
         "nav.hire": "Hubungi Saya",
         // Footer
-        "footer.copyright": "© 2026 Haris Fasha.",
+        "footer.copyright": "© 2024 MAN OF STEEL DESIGN. HAK CIPTA DILINDUNGI.",
         "footer.privacy": "Kebijakan Privasi",
         "footer.terms": "Syarat Layanan",
         "footer.accessibility": "Aksesibilitas",
